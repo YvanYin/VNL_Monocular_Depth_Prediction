@@ -3,7 +3,7 @@
 This repository contains the source code of our paper:
 [Yin Wei, Yifan Liu, Chunhua Shen, Youliang Yan, Enforcing geometric constraints of virtual normal for depth prediction](https://arxiv.org/abs/1907.12209) (accepted for publication in ICCV' 2019).
 
-##Some Results
+## Some Results
 
 ![NYU_Depth](./examples/nyu_gif.gif)
 ![kitti_Depth](./examples/kitti_gif.gif)
@@ -17,7 +17,7 @@ This repository contains the source code of our paper:
 - **State-of-the-art performance:** The AbsRel errs are 10.8% and 7.2% on NYU and KITTI. More details please refer to our full paper. The absrel err of the released model on NYU can reach 10.5%. 
 
 ****
-##Installation
+## Installation
 - Please refer to [Installation]().
 
 ## Datasets
@@ -36,7 +36,7 @@ This repository contains the source code of our paper:
 
 
   
-##Inference
+## Inference
 
 ```bash
 # Run the inferece on NYUDV2 dataset
