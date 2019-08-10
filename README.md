@@ -40,13 +40,13 @@ This repository contains the source code of our paper:
   
 ##Inference
 
-```python
+```bash
 # Run the inferece on NYUDV2 dataset
  python  ./tools/test_nyu_metric.py \
---dataroot    ./datasets/NYUDV2 \
---dataset     nyudv2 \
---cfg_file     lib/configs/resnext101_32x4d_nyudv2_class \
---load_ckpt   ./nyu_rawdata.pth 
+		--dataroot    ./datasets/NYUDV2 \
+		--dataset     nyudv2 \
+		--cfg_file     lib/configs/resnext101_32x4d_nyudv2_class \
+		--load_ckpt   ./nyu_rawdata.pth 
 ```
 If you want to test the kitti dataset, please see [here](./datasets/KITTI/README.md)
 
