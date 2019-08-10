@@ -1,16 +1,16 @@
+import os
+import cv2
+import torch
+import numpy as np
+from lib.utils.net_tools import load_ckpt
+from lib.utils.logging import setup_logging
+import torchvision.transforms as transforms
 from tools.parse_arg_test import TestOptions
 from data.load_dataset import CustomerDataLoader
 from lib.models.metric_depth_model import MetricDepthModel
-from lib.utils.net_tools import load_ckpt
-import torch
-import os
-import numpy as np
 from lib.core.config import cfg, merge_cfg_from_file
-import matplotlib.pyplot as plt
-from lib.utils.logging import setup_logging
-import torchvision.transforms as transforms
+
 logger = setup_logging(__name__)
-import cv2
 
 
 def scale_torch(img, scale):
@@ -49,9 +49,8 @@ if __name__ == '__main__':
     model.cuda()
     model = torch.nn.DataParallel(model)
 
-    path = '/home/yvan/3Dvideos_testing/3Dvideo_1/1'
-    files = os.listdir(path)
-    imgs_list = [i for i in files if '.py' not in i]
+    path = './imgs' # the dir of imgs
+    imgs_list = os.listdir(path)
     for i in imgs_list:
         print(i)
         with torch.no_grad():
@@ -65,11 +64,8 @@ if __name__ == '__main__':
             pred_depth_scale = (pred_depth / pred_depth.max() * 60000).astype(np.uint16)
 
             model_name = test_args.load_ckpt.split('/')[-1].split('.')[0]
-            #image_dir = os.path.join(cfg.ROOT_DIR, './evaluation', cfg.MODEL.ENCODER, model_name + '_randoms')
             image_dir = os.path.join(path + '_randoms')
             if not os.path.exists(image_dir):
                 os.makedirs(image_dir)
 
-            plt.imsave(os.path.join(image_dir, i.replace('.', '-d.')), pred_depth, cmap='rainbow')
-            cv2.imwrite(os.path.join(image_dir, i), img)
             cv2.imwrite(os.path.join(image_dir, i.split('.')[0] + '-raw.png'), pred_depth_scale)
