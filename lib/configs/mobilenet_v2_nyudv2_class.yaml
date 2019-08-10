@@ -1,0 +1,37 @@
+MODEL:
+  INIT_TYPE: 'xavier'
+  ENCODER: 'mobilenetv2_body_stride8'
+  MODEL_REPOSITORY: 'datasets/pretrained_model'
+  PRETRAINED_WEIGHTS: 'mobilenet_v2.pth.tar'
+  LOAD_IMAGENET_PRETRAINED_WEIGHTS: False
+  RESNET_BOTTLENECK_DIM: [32, 24, 32, 96, 320]
+  RESNET_BLOCK_DIM: [64, 64, 128, 256, 512]
+
+  # Configure the decoder
+  FCN_DIM_IN: [128, 64, 64, 64, 64, 64]
+  FCN_DIM_OUT: [64, 64, 64, 64, 64]
+  LATERAL_OUT: [128, 64, 64, 64]
+  # Configure input and output channel of the model
+  ENCODRE_INPUT_C: 3
+  DECODER_OUTPUT_C: 60
+  FREEZE_BACKBONE_BN: False
+  PREDICTION_METHOD: 'classification'
+
+DATASET:
+  NAME: 'nyudv2'
+  RGB_PIXEL_MEANS: (0.485, 0.456, 0.406)
+  RGB_PIXEL_VARS: (0.229, 0.224, 0.225)
+  # Scale the depth map
+  DEPTH_SCALE: 10.0
+  CROP_SIZE: (384, 384)  # (height, width)
+  # Minimum depth after data augmentation
+  DEPTH_MIN: 0.01
+  # Maximum depth
+  DEPTH_MAX: 1.7
+  FOCAL_Y: 519.0
+  FOCAL_X: 519.0
+
+
+
+
+
