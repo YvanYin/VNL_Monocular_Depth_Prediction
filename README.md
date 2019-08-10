@@ -11,9 +11,7 @@ This repository contains the source code of our paper:
 
 
 ## Framework
-<p align="center">
 ![SurfaceNormal](./examples/framework.jpg)
-</p>
 
 ## Hightlights
 - **State-of-the-art performance:** The AbsRel errs are 10.8% and 7.2% on NYU and KITTI. More details please refer to our full paper. The absrel err of the released model on NYU can reach 10.5%. 
