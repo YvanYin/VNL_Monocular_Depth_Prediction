@@ -12,9 +12,12 @@ This repository contains the source code of our paper:
 
 ## Framework
 ![SurfaceNormal](./examples/framework.jpg)
-
+****
 ## Hightlights
-- **State-of-the-art performance:** The AbsRel errs are 10.8% and 7.2% on NYU and KITTI. More details please refer to our full paper. The absrel err of the released model on NYU can reach 10.5%. 
+- **State-of-the-art performance:** The comparisons with other SOTA methods on NYU and KITTI are illustrated as follow. The published model trained on NYU can achieve 10.5% on absrel.
+![cmp_NYU_Depth](./examples/cmp_SOTA_NYU.jpg)
+![cmp_kitti_Depth](./examples/cmp_SOTA_KITTI.jpg)
+
 
 ****
 ## Installation
