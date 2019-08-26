@@ -4,5 +4,5 @@ class TestOptions(BaseOptions):
     def initialize(self, parser):
         parser = BaseOptions.initialize(self, parser)
         parser.add_argument('--phase', type=str, default='test', help='test flag')
-        parser.add_argument('--phase_anno', type=str, default='eigen/eigen_test', help='Annotations file name')
+        parser.add_argument('--phase_anno', type=str, default='test', help='Annotations file name')
         return parser
