@@ -9,6 +9,7 @@ from tools.parse_arg_test import TestOptions
 from data.load_dataset import CustomerDataLoader
 from lib.models.metric_depth_model import MetricDepthModel
 from lib.core.config import cfg, merge_cfg_from_file
+from lib.models.image_transfer import bins_to_depth
 
 logger = setup_logging(__name__)
 
@@ -49,23 +50,19 @@ if __name__ == '__main__':
     model.cuda()
     model = torch.nn.DataParallel(model)
 
-    path = './imgs' # the dir of imgs
+    path = os.path.join(cfg.ROOT_DIR, './test_any_imgs_examples') # the dir of imgs
     imgs_list = os.listdir(path)
     for i in imgs_list:
         print(i)
         with torch.no_grad():
             img = cv2.imread(os.path.join(path, i))
-            img_resize = cv2.resize(img, (int(img.shape[1]/4), int(img.shape[0]/4)), interpolation=cv2.INTER_LINEAR)
+            img_resize = cv2.resize(img, (int(img.shape[1]), int(img.shape[0])), interpolation=cv2.INTER_LINEAR)
             img_torch = scale_torch(img_resize, 255)
             img_torch = img_torch[None, :, :, :].cuda()
 
-            pred_depth, _ = model.module.depth_model(img_torch)
+            _, pred_depth_softmax= model.module.depth_model(img_torch)
+            pred_depth = bins_to_depth(pred_depth_softmax)
             pred_depth = pred_depth.cpu().numpy().squeeze()
-            pred_depth_scale = (pred_depth / pred_depth.max() * 60000).astype(np.uint16)
+            pred_depth_scale = (pred_depth / pred_depth.max() * 60000).astype(np.uint16)  # scale 60000 for visualization
 
-            model_name = test_args.load_ckpt.split('/')[-1].split('.')[0]
-            image_dir = os.path.join(path + '_randoms')
-            if not os.path.exists(image_dir):
-                os.makedirs(image_dir)
-
-            cv2.imwrite(os.path.join(image_dir, i.split('.')[0] + '-raw.png'), pred_depth_scale)
+            cv2.imwrite(os.path.join(path, i.split('.')[0] + '-raw.png'), pred_depth_scale)
