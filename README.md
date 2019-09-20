@@ -48,6 +48,13 @@ This repository contains the source code of our paper:
 		--dataset     nyudv2 \
 		--cfg_file     lib/configs/resnext101_32x4d_nyudv2_class \
 		--load_ckpt   ./nyu_rawdata.pth 
+		
+# Test depth predictions on any images, please replace the data dir in test_any_images.py
+ python  ./tools/test_any_images.py \
+		--dataroot    ./ \
+		--dataset     any \
+		--cfg_file     lib/configs/resnext101_32x4d_nyudv2_class \
+		--load_ckpt   ./nyu_rawdata.pth 
 ```
 If you want to test the kitti dataset, please see [here](./datasets/KITTI/README.md)
 
