@@ -42,6 +42,9 @@ This repository contains the source code of our paper:
 ## Inference
 
 ```bash
+# add VNL lib to python path
+export PATH=$HOME/DepthEstimation/VNL_Monocular_Depth_Prediction/lib/:$PATH
+
 # Run the inferece on NYUDV2 dataset
  python  ./tools/test_nyu_metric.py \
 		--dataroot    ./datasets/NYUDV2 \
