@@ -75,14 +75,14 @@ If you want to test the kitti dataset, please see [here](./datasets/KITTI/README
 ```	
 
 ### Citation
-
+```
 @inproceedings{Yin2019enforcing,
   title={Enforcing geometric constraints of virtual normal for depth prediction},
   author={Yin, Wei and Liu, Yifan and Shen, Chunhua and Yan, Youliang},
   booktitle= {The IEEE International Conference on Computer Vision (ICCV)},
   year={2019}
 }
-
+```
 ### Contact
 Wei Yin: wei.yin@adelaide.edu.au
 
