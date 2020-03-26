@@ -1,5 +1,8 @@
 #### Enforcing geometric constraints of virtual normal for depth prediction.
 
+[NEW] Training codes have been uploaded!
+
+
 This repository contains the source code of our paper:
 [Yin Wei, Yifan Liu, Chunhua Shen, Youliang Yan, Enforcing geometric constraints of virtual normal for depth prediction](https://arxiv.org/abs/1907.12209) (accepted for publication in ICCV' 2019).
 
@@ -59,8 +62,20 @@ This repository contains the source code of our paper:
 If you want to test the kitti dataset, please see [here](./datasets/KITTI/README.md)
 
 
+## Training
+
+```bash
+# Run the inferece on NYUDV2 dataset
+ python  ./tools/train_nyu_metric.py \
+		--dataroot    ./datasets/NYUDV2 \
+		--dataset     nyudv2 \
+		--cfg_file     lib/configs/resnext101_32x4d_nyudv2_class 
+                #--load_ckpt *.pth
+                #--resume		
+```	
+
 ### Citation
-```
+
 @inproceedings{Yin2019enforcing,
   title={Enforcing geometric constraints of virtual normal for depth prediction},
   author={Yin, Wei and Liu, Yifan and Shen, Chunhua and Yan, Youliang},
