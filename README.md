@@ -82,7 +82,7 @@ If you want to test the kitti dataset, please see [here](./datasets/KITTI/README
   booktitle= {The IEEE International Conference on Computer Vision (ICCV)},
   year={2019}
 }
-```
+
 ### Contact
 Wei Yin: wei.yin@adelaide.edu.au
 
