@@ -75,6 +75,7 @@ If you want to test the kitti dataset, please see [here](./datasets/KITTI/README
 ```	
 
 ### Citation
+
 ```
 @inproceedings{Yin2019enforcing,
   title={Enforcing geometric constraints of virtual normal for depth prediction},
@@ -83,6 +84,14 @@ If you want to test the kitti dataset, please see [here](./datasets/KITTI/README
   year={2019}
 }
 ```
+
+
+## Other works :)
+We have done a new work to aim to solve the generalization problem of monocular depth prediction. Please refer to following link. :)
+- Paper: DiverseDepth: Affine-invariant Depth Prediction Using Diverse Data
+- Code: https://github.com/YvanYin/DiverseDepth
+
+
 ### Contact
 Wei Yin: wei.yin@adelaide.edu.au
 
