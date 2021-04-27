@@ -84,7 +84,7 @@ __C.TRAIN.OUTPUT_DIR = './outputs'
 __C.TRAIN.LOG_DIR = os.path.join(__C.TRAIN.OUTPUT_DIR, cfg.TRAIN.RUN_NAME)
 # Differ the learning rate between encoder and decoder
 __C.TRAIN.SCALE_DECODER_LR = 1
-__C.TRAIN.BASE_LR = 0.0005
+__C.TRAIN.BASE_LR = 0.01
 __C.TRAIN.MAX_ITER = 0
 # Set training epoches, end at the last epoch of list
 __C.TRAIN.EPOCH = 20
