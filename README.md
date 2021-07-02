@@ -83,6 +83,13 @@ If you want to test the kitti dataset, please see [here](./datasets/KITTI/README
   booktitle= {The IEEE International Conference on Computer Vision (ICCV)},
   year={2019}
 }
+
+@article{yin2021virtual,
+  title={Virtual Normal: Enforcing Geometric Constraints for Accurate and Robust Depth Prediction},
+  author={Yin, Wei and Liu, Yifan and Shen, Chunhua},
+  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)},
+  year={2021}
+}
 ```
 
 
