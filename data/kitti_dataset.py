@@ -62,7 +62,7 @@ class KITTIDataset():
         A_crop = self.scale_torch(A_crop, 255.)
         B_crop = self.scale_torch(B_crop, resize_ratio)
 
-        B_classes = self.depth_to_class(B_crop)
+        B_classes = self.depth_to_bins(B_crop)
 
         invalid_side = [0, 0, 0, 0] if crop_size[1] != 0 else [int((pad[0] + 50)*resize_ratio), 0, 0, 0]
 
