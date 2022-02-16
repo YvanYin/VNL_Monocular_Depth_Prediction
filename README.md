@@ -38,7 +38,7 @@ This repository contains the source code of our paper:
 - ResNext101_32x4d backbone, trained on NYU dataset, download [here](https://cloudstor.aarnet.edu.au/plus/s/7kdsKYchLdTi53p)
 - ResNext101_32x4d backbone, trained on KITTI dataset (Eigen split), download [here](https://cloudstor.aarnet.edu.au/plus/s/eviO16z68cKbip5)
 - ResNext101_32x4d backbone, trained on KITTI dataset (Official split), download [here](https://cloudstor.aarnet.edu.au/plus/s/pqIxORtFrVOFoea)
-
+- ImageNet pretrained weight, download [here](https://cloudstor.aarnet.edu.au/plus/s/J87DYsTlOjD83LR). 
 
 
   
