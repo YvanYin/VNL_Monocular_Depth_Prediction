@@ -123,7 +123,7 @@ def merge_cfg_from_file(train_args):
     cfg_filename = train_args.cfg_file
     cfg_file = os.path.join(__C.ROOT_DIR, cfg_filename + '.yaml')
     with open(cfg_file, 'r') as f:
-        yaml_cfg = AttrDict(yaml.load(f))
+        yaml_cfg = AttrDict(yaml.load(f, Loader=yaml.FullLoader))
     _merge_a_into_b(yaml_cfg, __C)
     __C.DATASET.DEPTH_MIN_LOG = np.log10(__C.DATASET.DEPTH_MIN)
     # Modify some configs

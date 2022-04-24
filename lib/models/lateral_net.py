@@ -148,7 +148,7 @@ class ASPP_block(nn.Module):
         x5 = self.globalpool_conv1x1(x5)
         x5 = self.globalpool_bn(x5)
         w, h = x1.size(2), x1.size(3)
-        x5 = F.upsample(input=x5, size=(w, h), mode='bilinear', align_corners=True)
+        x5 = F.interpolate(input=x5, size=(w, h), mode='bilinear', align_corners=True)
 
         out = torch.cat([x1, x2, x3, x4, x5], 1)
         return out
@@ -308,7 +308,7 @@ class fcn_last_block(nn.Module):
         self.ftb = FTB_block(dim_in, dim_out)
 
     def forward(self, input, backbone_stage_size):
-        out = F.upsample(input=input, size=(backbone_stage_size[4][0], backbone_stage_size[4][1]), mode='bilinear', align_corners=True)
+        out = F.interpolate(input=input, size=(backbone_stage_size[4][0], backbone_stage_size[4][1]), mode='bilinear', align_corners=True)
         out = self.ftb(out)
-        out = F.upsample(input=out, size=(backbone_stage_size[5][0], backbone_stage_size[5][1]), mode='bilinear', align_corners=True)
+        out = F.interpolate(input=out, size=(backbone_stage_size[5][0], backbone_stage_size[5][1]), mode='bilinear', align_corners=True)
         return out
