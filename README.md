@@ -35,9 +35,9 @@ This repository contains the source code of our paper:
   
   
 ## Model Zoo
-- ResNext101_32x4d backbone, trained on NYU dataset, download [here](https://cloudstor.aarnet.edu.au/plus/s/7kdsKYchLdTi53p)
-- ResNext101_32x4d backbone, trained on KITTI dataset (Eigen split), download [here](https://cloudstor.aarnet.edu.au/plus/s/eviO16z68cKbip5)
-- ResNext101_32x4d backbone, trained on KITTI dataset (Official split), download [here](https://cloudstor.aarnet.edu.au/plus/s/pqIxORtFrVOFoea)
+- ResNext101_32x4d backbone, trained on NYU dataset, download [here](https://drive.google.com/drive/folders/1B5speI1_h1aEXFIewCjNlSrWD99M-yP5)
+- ResNext101_32x4d backbone, trained on KITTI dataset (Eigen split), download [here](https://drive.google.com/drive/folders/1B5speI1_h1aEXFIewCjNlSrWD99M-yP5)
+- ResNext101_32x4d backbone, trained on KITTI dataset (Official split), download [here](https://drive.google.com/drive/folders/1B5speI1_h1aEXFIewCjNlSrWD99M-yP5)
 - ImageNet pretrained weight, download [here](https://cloudstor.aarnet.edu.au/plus/s/J87DYsTlOjD83LR). 
 
 
