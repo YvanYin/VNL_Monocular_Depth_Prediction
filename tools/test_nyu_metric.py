@@ -1,4 +1,7 @@
 import os
+import sys
+# uncomment the line below if you face "No module named 'lib'"" problem
+# sys.path.append(os.path.abspath('./'))
 import cv2
 import torch
 import numpy as np

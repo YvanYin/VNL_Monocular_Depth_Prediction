@@ -52,7 +52,7 @@ This repository contains the source code of our paper:
 		--cfg_file     lib/configs/resnext101_32x4d_nyudv2_class \
 		--load_ckpt   ./nyu_rawdata.pth 
 		
-# Test depth predictions on any images, please replace the data dir in test_any_images.py
+# Test depth predictions on any images, please replace the data in dir 'test_any_imgs_examples'
  python  ./tools/test_any_images.py \
 		--dataroot    ./ \
 		--dataset     any \

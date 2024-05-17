@@ -13,7 +13,7 @@
 ```bash
 # Firstly, your conda is setup properly with the right environment for that
 
-conda create --n VNL python=3.6
+conda create -n VNL python=3.6
 conda activate VNL
 
 

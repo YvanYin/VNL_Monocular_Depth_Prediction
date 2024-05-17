@@ -1,7 +1,10 @@
 import os
+import sys
 import cv2
 import torch
 import numpy as np
+# uncomment the line below if you face "No module named 'lib'"" problem
+# sys.path.append(os.path.abspath('./'))
 from lib.utils.net_tools import load_ckpt
 from lib.utils.logging import setup_logging
 import torchvision.transforms as transforms
